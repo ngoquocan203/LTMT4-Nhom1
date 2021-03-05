@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bashket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel/assets/owl.theme.default.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/css/custom.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+    <strong>
+      <span class="text-success">Eco</span>
+      <span>Love</span>
+      <span class="text-success"></span>
+    </strong>
+    </a>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sanpham.html">Sản phẩm <span class="sr-only">(current)</span></a>
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Hỗ Trợ</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">About</a>
+      </li>
+     </ul>
+ </div>
+  <div class="collapse navbar-collapse left-content-end" id="navbarNavDropdown"> 
+  <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+   <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+     <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Sign in </a>
+      <li class="nav-item">
+        <a class="nav-link" href="sign.html">Sign up</a>
+      </li>
+       <li>
+        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn bg-success my-4"><i class="fa fa-shopping-cart"></i><span> items in cart</span></a></div>
+      </li>
+     </ul>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+</nav>
+      </div>
+    </nav>
+  <div id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- breadcrumb-->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li aria-current="page" class="breadcrumb-item active">Shopping cart</li>
+                </ol>
+              </nav>
+            </div>
+            <div id="basket" class="col-lg-9">
+              <div class="box">
+                <form method="post" action="checkout1.html">
+                  <h1>Shopping cart</h1>
+                  <p class="text-muted">Bạn có 2 món trong giỏ hàng.</p>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th colspan="2">Sản Phẩm</th>
+                          <th>Số lượng</th>
+                          <th>Giá tiền</th>
+                          <th>Discount</th>
+                          <th colspan="2">Thành tiền</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="#"><img src="img/cafe.jpg" alt="Sample"></a></td>
+                          <td><a href="detail1.html">Cafe Chuli</a></td>
+                          <td>
+                            <input type="number" value="2" class="form-control">
+                          </td>
+                          <td>180.000vnd</td>
+                          <td>0.00</td>
+                          <td>360.000vnd</td>
+                          <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="detail2.html"><img src="img/b4.jpg" alt="Sample"></a></td>
+                          <td><a href="#">Đào hữu cơ</a></td>
+                          <td>
+                            <input type="number" value="1" class="form-control">
+                          </td>
+                          <td>149.000vnd</td>
+                          <td>0.00</td>
+                          <td>149.000vnd</td>
+                          <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th colspan="5">Thành tiền</th>
+                          <th colspan="2">509.000vnd</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <!-- /.table-responsive-->
+                  <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
+                    <div class="left"><a href="category.html" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i> Continue shopping</a></div>
+                    <div class="right">
+                      <button class="btn btn-outline-secondary"><i class="fa fa-refresh"></i> Update cart</button>
+                      <button type="submit" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.box-->
+              
+                </div>
+                
+            <!-- /.col-lg-9-->
+            <div class="col-lg-3">
+              <div id="order-summary" class="box">
+                <div class="box-header">
+                  <h3 class="mb-0">Phiếu Hàng</h3>
+                </div>
+                <p class="text-muted">Phí vận chuyển & bổ sung dựa theo đơn hàng</p>
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>Tổng Tiền</td>
+                        <th>509.000vnd</th>
+                      </tr>
+                      <tr>
+                        <td>Phí Vận Chuyển</td>
+                        <th>0.00vnd</th>
+                      </tr>
+                      <tr>
+                        <td>Thuế</td>
+                        <th>10.000vnd</th>
+                      </tr>
+                      <tr class="total">
+                        <td>Tổng</td>
+                        <th>519.000vnd</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h4 class="mb-0">Coupon code</h4>
+                </div>
+                <p class="text-muted">If you have a coupon code, please enter it in the box below.</p>
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control"><span class="input-group-append">
+                      <button type="button" class="btn btn-primary"><i class="fa fa-gift"></i></button></span>
+                  </div>
+                  <!-- /input-group-->
+                </form>
+              </div>
+            </div>
+            <!-- /.col-md-3-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/jquery/jquery.min.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/js/front.js"></script>
+  </body>
+</html>
