@@ -12,15 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Category;
-use App\Product;
-
-
-Route::get('//', function () {
-    return view('admin.layout.index');
-});
-
-
 
 Route::group(['prefix'=>'admin'], function(){
 	Route::group(['prefix'=>'layout'], function(){
@@ -103,4 +94,9 @@ Route::group(['prefix'=>'admin'], function(){
 
 Route::group(['prefix'=>'font'], function(){
 	Route::get('home','HomeController@getHome');
+	Route::get('search','HomeController@getSearch');
+	Route::get('product/{id}','HomeController@getProduct');
+	Route::get('detail/{id}','HomeController@getDetail');
+	Route::get('cart/{id}','HomeController@getCart');
 });
+

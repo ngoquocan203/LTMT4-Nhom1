@@ -33,6 +33,7 @@ class ProductController extends Controller
        $product->price = $request->price;
        $product->promotion_price = $request->promotion_price;
        $product->feature_image = $file;
+       $product->quantity = $request->quantity;
        $product->content = $request->content;
        $product->namecate = $request->namecate;
 
@@ -58,6 +59,7 @@ class ProductController extends Controller
        $product->price = $request->price;
        $product->promotion_price = $request->promotion_price;
        $product->feature_image = $file;
+       $product->quantity = $request->quantity;
        $product->content = $request->content;
        $product->namecate = $request->namecate;
        $product->save();
