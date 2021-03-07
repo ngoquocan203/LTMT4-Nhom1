@@ -47,7 +47,6 @@ class HomeController extends Controller
         $slide = Slide::all();
         view()->share('slide',$slide);
         $category['category']=Category::all();
-         
         $type_product['products'] = Product::where('category_id',$id)->paginate(6);
         
         return view('font.product',$category,$type_product);

@@ -38,7 +38,7 @@
 									<div class="form-group" >
 										<label>Ảnh sản phẩm</label>
 										<input id="img" type="file" name="feature_image" class="form-control hidden" onchange="changeImg(this)">
-					                    <img id="avatar" class="thumbnail" width="300px" src="{{asset('admin_asset/img/'.$products->feature_image)}}"">
+					                    <img id="avatar" class="thumbnail" width="300px" src="{{asset('admin_asset/img/'.$products->feature_image)}}">
 					                   
 									</div>
 									<div class="form-group">

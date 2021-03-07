@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('font.home');
+//});
+
+
 Route::group(['prefix'=>'admin'], function(){
 	Route::group(['prefix'=>'layout'], function(){
 		Route::get('index','IndexController@getIndex');
@@ -92,6 +97,8 @@ Route::group(['prefix'=>'admin'], function(){
 		
 });
 
+
+Route::get('/','HomeController@getHome');
 Route::group(['prefix'=>'font'], function(){
 	Route::get('home','HomeController@getHome');
 	Route::get('search','HomeController@getSearch');
@@ -99,4 +106,5 @@ Route::group(['prefix'=>'font'], function(){
 	Route::get('detail/{id}','HomeController@getDetail');
 	Route::get('cart/{id}','HomeController@getCart');
 });
+
 

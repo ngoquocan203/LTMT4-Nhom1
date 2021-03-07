@@ -26,9 +26,12 @@
     <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
       <!-- Slide -->
       @include('layout.slide')
-
+      <br>
+        <h4>Có {{count($products)}} Sản Phẩm:</h4>
         <div class="row my-4">
+
           @foreach($products as $item)
+
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="{{asset('font/detail/'.$item->id)}}">

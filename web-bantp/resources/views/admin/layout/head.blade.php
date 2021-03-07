@@ -7,4 +7,6 @@
 	<link href="admin_asset/css/datepicker3.css" rel="stylesheet">
 	<link href="admin_asset/css/styles.css" rel="stylesheet">
 	<script src="admin_asset/js/lumino.glyphs.js"></script>
+	<script src="admin_asset/js/jquery-1.11.1.min.js"></script>
 </head>
+

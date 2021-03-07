@@ -28,8 +28,8 @@
           @foreach($new as $item)
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="detail1.html">
-                <img class="img-fluid w-100" src="{{asset('admin_asset/img/'.$item->feature_image)}}" alt="Sample">
+              <a href="{{asset('font/detail/'.$item->id)}}">
+                <img class="img-fluid w-100" height="20px" src="{{asset('admin_asset/img/'.$item->feature_image)}}" alt="Sample">
               </a>
               <div class="card-body text-center">
                 <h5 class="mb-0">{{$item->name}}</h5>
@@ -54,16 +54,14 @@
           </div>
           @endforeach  
         </div>  
-        <div class="row" style="margin: 0px">
-          {{$new->links()}}
-        </div>
+        
 
         <h3 class="text-center mt-4 pt-5">Sản Giảm Giá</h3>
         <div class="row my-4">
           @foreach($sale_products as $item)
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="detail1.html">
+              <a href="{{asset('font/detail/'.$item->id)}}">
                 <img class="img-fluid w-100" src="{{asset('admin_asset/img/'.$item->feature_image)}}" alt="Sample">
               </a>
               <div class="card-body text-center">
