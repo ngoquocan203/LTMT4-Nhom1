@@ -86,10 +86,9 @@
             </div>
           </div>
           @endforeach  
+          
         </div>  
-        <div class="row" style="margin: 0px">
-          {{$new->links()}}
-        </div>
+        
       </div> 
     </div>
   </div>

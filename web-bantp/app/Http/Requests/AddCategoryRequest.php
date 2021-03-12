@@ -25,13 +25,13 @@ class AddCategoryRequest extends FormRequest
     {
         return [
             //
-            'name'=>'unique:category,name'
+            
         ];
     }
 
     public function messages(){
         return[
-            'name.unique'=>'Tên danh mục bị trùng'
+            
         ];
     }
 }

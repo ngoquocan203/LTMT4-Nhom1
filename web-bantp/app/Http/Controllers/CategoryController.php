@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
-use App\Http\Requests\AddCategoryRequest;
+
 use App\Http\Requests\EditCateRequest;
 
 
@@ -18,7 +18,7 @@ class CategoryController extends Controller
     }
 
     
-    public function postCategory(AddCategoryRequest $request)
+    public function postCategory(Request $request)
     {
        $this->validate($request,
         [

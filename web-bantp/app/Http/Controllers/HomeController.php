@@ -8,10 +8,13 @@ use App\Category;
 use App\Product;
 use App\Cart;
 use Session;
+use Auth;
 class HomeController extends Controller
 {
     //
-
+    //public function __construct() {
+    //$this->middleware('auth');
+   // }
 
     public function getHome()
     {	
@@ -59,16 +62,32 @@ class HomeController extends Controller
         return view('font.detail',$category,$product);
     }
 
-    public function getCart(Request $request ,$id)
+    public function addToCart($id)
     {
-       $product['products'] = Product::where('id',$id)->first();
-       if($product != null )
-       {
-            $cart = Session('Cart') ? Session('Cart'):null;
-            $newCart = new Cart($cart);
-            $newCart->AddCart($product,$id);
-            dd($newCart);
-       }
+        $products =Product::find($id);
+        $cart = session()->get('cart');
+        if(isset($cart[$id]))
+        {
+            $cart[$id]['quantity'] = $cart[$id]['quantity'] + 1;
+
+        }
+        else{
+            $cart[$id] = [
+                'name' => $products->name,
+                'price' => $products->price,
+                'quantity' => 1
+            ];
+        }
+        session()->put('cart',$cart);  
+
+       //$product['products'] = Product::where('id',$id)->first();
+       //if($product != null )
+       //{
+       //     $cart = Session('Cart') ? Session('Cart'):null;
+       //     $newCart = new Cart($cart);
+       //     $newCart->AddCart($product,$id);
+       //     dd($newCart);
+       //}
     
 
         //$product['products'] = Product::find($id);
@@ -82,5 +101,14 @@ class HomeController extends Controller
 
         //return view('font.cart',$category,$product);
        
+    }
+
+    public function getShow()
+    {
+        $category = Category::all();
+        $slide =Slide::all();
+        view()->share('category',$category);
+        view()->share('slide',$slide);
+       return view('font.cart');
     }
 }

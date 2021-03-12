@@ -25,12 +25,12 @@
                                 <table class="table table-bordered" style="margin-top:20px;" >              
                                     <thead>
                                         <tr class="bg-primary">
-                                            <th>ID</th>
-                                            <th>Level</th>
-                                            <th width="30%">Full Name</th>
-                                            <th>Email</th>
-                                            <th>Password</th>
-                                            <th>Tùy chọn</th>
+                                            <th width="5%">ID</th>
+                                            <th width="5%">Level</th>
+                                            <th width="20%">Full Name</th>
+                                            <th width="25%">Email</th>
+                                            <th width="25%">Password</th>
+                                            <th width="20%">Tùy chọn</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -48,7 +48,10 @@
                                         </tr>
                                         @endforeach
                                     </tbody>
-                                </table>                            
+                                </table>    
+                                <div>
+                                    {{$users->links()}}
+                                </div>                        
                             </div>
                         </div>
                         <div class="clearfix"></div>

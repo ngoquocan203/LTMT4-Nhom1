@@ -5,8 +5,13 @@
 	@include('admin.layout.header')
 		
 	@include('admin.layout.menu')
-		
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">		
+		@if(session('mess'))
+		<div class="alert alert-success">
+			{{session('mess')}}
+		</div>
+	@endif 		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Trang chủ</h1>
@@ -23,19 +28,6 @@
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">{{$product}}</div>
 							<div class="text-muted">Sản phẩm</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3">
-				<div class="panel panel-orange panel-widget">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">0</div>
-							<div class="text-muted">Bình luận</div>
 						</div>
 					</div>
 				</div>

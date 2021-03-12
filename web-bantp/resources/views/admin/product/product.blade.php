@@ -49,7 +49,7 @@
 											<th width="20%">Ảnh sản phẩm</th>
 											<th >Định Lượng</th>
 											<th >Nội Dung</th>
-											<th>Tùy chọn</th>
+											<th width="15%">Tùy chọn</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -70,9 +70,15 @@
 												<a href="admin\product\product\{{$pd->id}}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
 											</td>
 										</tr>
+
 										@endforeach
+										
 									</tbody>
-								</table>							
+
+								</table>	
+								<div>
+									{{$products->links()}}
+								</div>						
 							</div>
 						</div>
 						<div class="clearfix"></div>

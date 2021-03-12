@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
 use App\User;
+use Auth;
 class IndexController extends Controller
 {
     //
@@ -14,12 +15,12 @@ class IndexController extends Controller
         $product = Product::count();  
         $category = Category::count(); 
         $user = User::count(); 
-    	return view('admin.layout.index',compact('product','category','user'));
+
+        return view('admin.layout.index',compact('product','category','user'));
     }
 
-     public function getLogout()
-    {
-    	Auth::logout();
-    	return redirect()->intened('admin.login.login');
-    }
+     
+
+  
+    
 }

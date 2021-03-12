@@ -39,16 +39,31 @@
       </form>
     </div>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-     <ul class="navbar-nav">
-      <li >
-        <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block" style="margin-right: 50px"><a href="{{asset('font/cart')}}" class="btn btn-primary navbar-btn bg-success my-4"><i class="fa fa-shopping-cart"></i><span> Giỏ hàng</span></a></div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Sign in </a>
-        <li class="nav-item">
-          <a class="nav-link" href="sign.html">Sign up</a>
+      <ul class="navbar-nav">
+        <li >
+          <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block" style="margin-right: 100px"><a href="{{url('font/showcart')}}" class="btn btn-primary navbar-btn bg-success my-4" ><i class="fa fa-shopping-cart"></i><span> Giỏ hàng</span></a></div>
         </li>
+        @if(Auth::check()) 
+          <li class="nav-item nav-item dropdown" style="font-size: 13px;">
+          <a class="nav-link" href="" style="">Xin chào <p style="font-size: 12px">{{Auth::user()->email}}</p></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item nav-link" href="{{url('editacc')}}" >Chỉnh sửa thông tin</a>
+            <a class="dropdown-item nav-link" href="{{url('admin/logout')}}" >Logout</a>
 
+          </div>
+          </li>
+         @else
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              Tài Khoản
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item nav-link" href="{{url('login')}}" >Đăng nhập</a>
+              <a class="dropdown-item nav-link" href="{{url('register')}}" >Đăng kí</a>
+            </div>
+          </li>
+          
+        @endif
       </ul>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">

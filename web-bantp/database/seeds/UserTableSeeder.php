@@ -13,16 +13,11 @@ class UserTableSeeder extends Seeder
     {
         //
     	$data = [
+	    	
 	    	[
 				'fullname'=>'Ngô Quốc An',
-				'email'=>'ngoquocan203@gmail.com',
-				'password'=>'123456',
-				'level'=>1
-	    	],
-	    	[
-				'fullname'=>'Nguyễn Văn Bình',
-				'email'=>'binh9999@gmail.com',
-				'password'=>'123456',
+				'email'=>'admin@gmail.com',
+				'password'=>bcrypt('123456'),
 				'level'=>1
 	    	],
 		];

@@ -125,3 +125,23 @@
     <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
     <script src="https://d19m59y37dris4.cloudfront.net/obaju/2-1-1/js/front.js"></script>
+    <!--<script>
+    	function addToCart(event){
+    		event.preventDefaut();
+    		let urlCart = $(this).data('url');
+    		$.ajax({
+    			type: ,
+    			url: urlCart,"GET"
+    			success: function (data){
+    				if(data.code === 200)
+    				{
+    					alert('thêm thành công')
+    				}
+    			},
+    			
+    		});
+    	}
+    	$(function(){
+    		$('.addToCart').on('click',addToCart);
+    	});
+    </script>-->

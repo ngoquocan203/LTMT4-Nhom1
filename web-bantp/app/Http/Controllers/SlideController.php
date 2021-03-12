@@ -25,7 +25,7 @@ class SlideController extends Controller
     	$slide = new Slide;
     	$slide->name = $request->name;
     	$slide->image=$file;
-
+        $request->file('image')->move('admin_asset/img',$file);
     	$slide->save();
     	return redirect('admin/slide/slide')->with('thongbao','Thêm thành công');
     }
@@ -42,6 +42,7 @@ class SlideController extends Controller
     	$slide= Slide::find($id);
     	$slide->name = $request->name;
     	$slide->image=$file;
+        $request->file('image')->move('admin_asset/img',$file);
     	$slide->save();
     	return redirect('admin/slide/slide')->with('thongbao2','Sửa thành công');
     }

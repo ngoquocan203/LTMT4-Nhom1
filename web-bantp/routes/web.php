@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use App\Http\Middleware\CheckLevel;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +65,6 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::post('add','UserController@postAdd');
 
 		Route::get('user/{id}','UserController@getDelete');
-
 	});
 
 
@@ -78,33 +78,36 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::get('editslide/{id}','SlideController@getEdit');
 		Route::post('editslide/{id}','SlideController@postEdit');
 
-		Route::get('slide/{id}','SlideController@getDelete');
-		
-	});	
+		Route::get('slide/{id}','SlideController@getDelete');		
+	});		
 
-
-	Route::group(['prefix'=>'login'], function(){
-		Route::get('login','LoginController@getLogin');
-		Route::post('login','LoginController@postLogin');
-
-	});
-
-	Route::get('logout','IndexController@getlogout');
+	Route::get('logout','LogoutController@getlogout');
+	
 	Route::group(['prefix'=>'layout'], function(){
 		Route::get('index','IndexController@getIndex');
-	});
-
-		
+	});		
 });
 
 
 Route::get('/','HomeController@getHome');
+
 Route::group(['prefix'=>'font'], function(){
 	Route::get('home','HomeController@getHome');
 	Route::get('search','HomeController@getSearch');
 	Route::get('product/{id}','HomeController@getProduct');
 	Route::get('detail/{id}','HomeController@getDetail');
-	Route::get('cart/{id}','HomeController@getCart');
+	Route::get('cart/{id}','HomeController@addToCart');
+	Route::get('showcart','HomeController@getShow');
 });
+
+
+
+Route::get('login','LoginController@getLogin');
+Route::post('login','LoginController@postLogin');
+
+Route::get('register','RegisterController@getRegister');
+Route::post('register','RegisterController@postRegister');
+Route::get('editacc','RegisterController@getEditAcc');	
+Route::post('editacc','RegisterController@postEditAcc');	
 
 

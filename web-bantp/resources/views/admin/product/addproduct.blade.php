@@ -20,7 +20,7 @@
 					<div class="panel-heading">Thêm sản phẩm</div>
 					<div class="panel-body">
 						@include('admin.errors.not')
-						<form method="post" enctype="multipart/form-data">
+						<form method="post" enctype="multipart/form-data" action="{{url('admin/product/addproduct')}}">
 							<div class="row" style="margin-bottom:40px">
 								<div class="col-xs-8">
 									<div class="form-group" >

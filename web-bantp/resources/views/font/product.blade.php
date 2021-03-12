@@ -27,7 +27,7 @@
       <!-- Slide -->
       @include('layout.slide')
       <br>
-        <h4>Có {{count($products)}} Sản Phẩm:</h4>
+        
         <div class="row my-4">
 
           @foreach($products as $item)
