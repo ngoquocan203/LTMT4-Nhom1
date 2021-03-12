@@ -21,6 +21,7 @@ class Products extends Migration
             $table->integer('price');
             $table->integer('promotion_price');
             $table->string('feature_image');
+            $table->string('quantity');
             $table->string('content');
             $table->string('namecate');
 
